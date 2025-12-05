@@ -1,0 +1,138 @@
+.layer {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.8) 100%);
+    animation: fadeIn 1s ease-in-out;
+}
+.layer2 {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgb(0, 0, 0 , 0.8);
+    animation: fadeIn 1.5s ease-in-out;
+}
+.border-1s {
+    margin-top: 1.75rem;
+    border-bottom: 1px solid #f34263;
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animation Classes */
+.animate-fadeIn {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.animate-slideUp {
+    animation: slideUp 1s ease-in-out;
+}
+
+.animate-slideInLeft {
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.animate-slideInRight {
+    animation: slideInRight 1s ease-in-out;
+}
+
+/* Improved Layout Styles */
+.section-padding {
+    padding: 4rem 2rem;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.contact-card {
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.service-section {
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateY(-5px);
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 2rem 1rem;
+    }
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    .animate-slideInLeft,
+    .animate-slideInRight {
+        animation: slideUp 1s ease-in-out;
+    }
+}
