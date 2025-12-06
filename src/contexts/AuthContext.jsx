@@ -84,6 +84,9 @@ export const AuthProvider = ({ children }) => {
     // Add to users array
     setUsers(prevUsers => [...prevUsers, newUser]);
 
+    // Automatically log in the new user
+    setUser(newUser);
+
     return { success: true };
   };
 

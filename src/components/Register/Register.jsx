@@ -82,7 +82,7 @@ const Register = () => {
     setLoading(false);
 
     if (result.success) {
-      navigate('/login');
+      navigate('/layout');
     } else {
       setErrors({ general: result.message });
     }
